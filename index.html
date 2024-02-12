@@ -287,11 +287,23 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <h2 class="title is-3">Framework Overview</h2>
+        <img src="./static/images/overview.png" 
+             alt="Framework overview." 
+             class="framework-image">
+             <div class="content has-text-justified">
+              <p>
+                Overview of our proposed efficiency enhancement framework <b>AT-EDM</b>. 
+                <b>Single Denoising Step Token Pruning</b>: (1) We get the attention map from self-attention; 
+                (2) We calculate the importance score for each token using G-WPR; 
+                (3) We generate pruning masks; (4) We apply the masks on tokens after the feed-forward network to 
+                realize token pruning; (5) We repeat Steps (1)-(4) for each consecutive attention layer; 
+                (6) Before passing feature maps to the ResNet block, we recover pruned tokens through 
+                similarity-based copy. <b>Denoising-Steps-Aware Pruning Schedule (DSAP)</b>:  In early steps, we propose 
+                to prune fewer tokens and to have less FLOPs reduction. In the latter steps, we prune more 
+                aggressively for higher speedup.
+              </p>
+            </div>
       </div>
     </div>
     <!--/ Paper video. -->
