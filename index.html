@@ -317,7 +317,7 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">AT-EDM Shows High Efficiency and Fidelity </h2>
         <div class="content has-text-justified">
@@ -329,7 +329,7 @@
     </div>
       
     <div class="columns is-centered">
-      <!-- Visual Effects. -->
+      <!-- FID-CLIP Curves. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-4">FID-CLIP Curves</h2>
@@ -341,9 +341,9 @@
           </p>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ FID-CLIP Curves. -->
 
-      <!-- Matting. -->
+      <!-- FLOPs Budgets. -->
       <div class="column">
         <h2 class="title is-4">Various FLOPs Budgets</h2>
         <div class="columns is-centered">
@@ -351,7 +351,7 @@
             <img src="./static/images/various_flops.png" 
                  alt="FLOPs budget." 
                  class="flops-image"
-                 width="80%"
+                 width="82%"
                  height="auto">
             <p>
               We generate all images with the CFG-scale of 7.0, except for SD-XL\(^\dagger\), 
@@ -361,7 +361,23 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <!--/ FLOPs Budgets. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Latency Analysis</h2>
+        <div class="content has-text-justified">
+          <p>
+            Comparison between sampling latency in different cases. 
+            AT-EDM(\^\dagger\) does not deploying pruning at the second feature level 
+            while keeping other pruning rates the same as AT-EDM. Fused Operation (<b>FO</b>): 
+            libraries like xformers to boost attention computation. Current Implementation (<b>CI</b>): 
+            not provide attention maps as intermediate results. Desired Implementation (<b>DI</b>): provide
+            attention maps as intermediate results. 
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- Animation. -->
     <div class="columns is-centered">
