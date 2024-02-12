@@ -316,7 +316,11 @@
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">AT-EDM Shows High Efficiency and Fidelity Across CFG-Scales and FLOPs Budgets. </h2>
+        <h2 class="title is-3">AT-EDM Shows High Efficiency and Fidelity </h2>
+        <div class="content has-text-justified">
+          <p>
+            We report FID and CLIP scores of zero-shot image generation on the MS-COCO 2017 validation dataset.
+          </p>
       </div>
     </div>
       
@@ -324,32 +328,29 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-4">Visual Effects</h2>
+          <h2 class="title is-4">FID-CLIP Curves</h2>
+          <img src="./static/images/fid-clip.png" 
+               alt="FID-CLIP curves." 
+               class="fid-clip-image">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            The used CFG scales are [1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 7.0, 9.0, 12.0, 15.0].
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-4">Matting</h2>
+        <h2 class="title is-4">Various FLOPs Budgets</h2>
         <div class="columns is-centered">
           <div class="column content">
+            <img src="./static/images/various_flops.png" 
+                 alt="FLOPs budget." 
+                 class="flops-image">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              We generate all images with the CFG-scale of 7.0, except for SD-XL$^\dagger$, 
+              for which we use the CFG-scale of 4.0.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
           </div>
 
         </div>
