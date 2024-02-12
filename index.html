@@ -256,31 +256,28 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Diffusion models (DMs) have exhibited superior performance in generating high-quality and diverse images. 
+            However, this exceptional performance comes at the cost of expensive architectural design, particularly 
+            with the attention module heavily used in leading models. Existing works mainly adopt a retraining process 
+            to enhance the efficiency which is computational expensive and less scalable.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To this end, we introduce the Attention-driven Training-free Efficient Diffusion Model 
+            (<b>AT-EDM</b>), 
+            a framework that leverages attention maps to perform run-time pruning of redundant tokens during 
+            inference without retraining. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Specifically, we develop a single denoising step pruning strategy, 
+            Generalized Weighted Page Rank (G-WPR), to identify redundant tokens 
+            and a similarity-based recovery method to restore tokens for convolution operation.
+            Additionally, the Denoising-Steps-Aware Pruning (DSAP) is proposed to adjust the 
+            pruning budget across different denoising timesteps for better generation quality.
+          </p>
+          <p>
+            Extensive evaluations show that AT-EDM performs favorably against prior arts in terms of 
+            efficiency (e.g., 38.8% FLOPs saving and up to 52.7% latency saving over Stable Diffusion XL) 
+            while maintaining nearly the same FID and CLIP scores with the full model.
           </p>
         </div>
       </div>
