@@ -1,14 +1,14 @@
-# Nerfies
+# AT-EDM
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [AT-EDM website](https://atedm.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find AT-EDM useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{wang2024atedm,
+  author    = {Wang, Hongjie and Liu, Difan and Kang, Yan and Li, Yijun and Lin, Zhe and Jha, Niraj K. and Liu, Yuchen},
+  title     = {Attention-Driven Training-Free Efficiency Enhancement of Diffusion Models},
+  journal   = {arXiv preprint arXiv:2402.xxxxx},
+  year      = {2024},
 }
 ```
 
