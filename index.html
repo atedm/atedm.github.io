@@ -369,7 +369,7 @@
         <div class="content has-text-justified">
           <p>
             Comparison between sampling latency in different cases. 
-            AT-EDM(\^\dagger\) does not deploying pruning at the second feature level 
+            AT-EDM\(^\dagger\) does not deploying pruning at the second feature level 
             while keeping other pruning rates the same as AT-EDM. Fused Operation (<b>FO</b>): 
             libraries like xformers to boost attention computation. Current Implementation (<b>CI</b>): 
             not provide attention maps as intermediate results. Desired Implementation (<b>DI</b>): provide
@@ -378,6 +378,32 @@
         </div>
       </div>
     </div>
+
+    <div class="columns is-centered">
+      <!-- FID-CLIP Curves. -->
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/latency.png" 
+               alt="FID-CLIP curves." 
+               class="fid-clip-image">
+        </div>
+      </div>
+      <!--/ FID-CLIP Curves. -->
+
+      <!-- FLOPs Budgets. -->
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/latency_bd.png" 
+                 alt="FLOPs budget." 
+                 class="flops-image"
+                 width="100%"
+                 height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ FLOPs Budgets. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
